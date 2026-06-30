@@ -26,7 +26,7 @@ jobs:
       # Cache Bun's per-user install dir keyed on bun.lock. Saves
       # ~25s vs a cold install on every PR push.
       - name: Cache Bun deps
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ~/.bun/install/cache
           key: bun-${{ runner.os }}-${{ hashFiles('bun.lock') }}
